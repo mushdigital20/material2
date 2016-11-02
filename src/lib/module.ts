@@ -1,4 +1,4 @@
-import {NgModule, ModuleWithProviders} from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 
 import {
   MdRippleModule,
@@ -9,27 +9,28 @@ import {
   StyleCompatibilityModule,
 } from './core/index';
 
-import {MdButtonToggleModule} from './button-toggle/index';
-import {MdButtonModule} from './button/index';
-import {MdCheckboxModule} from './checkbox/index';
-import {MdRadioModule} from './radio/index';
-import {MdSelectModule} from './select/index';
-import {MdSlideToggleModule} from './slide-toggle/index';
-import {MdSliderModule} from './slider/index';
-import {MdSidenavModule} from './sidenav/index';
-import {MdListModule} from './list/index';
-import {MdGridListModule} from './grid-list/index';
-import {MdCardModule} from './card/index';
-import {MdIconModule} from './icon/index';
-import {MdProgressCircleModule} from './progress-circle/index';
-import {MdProgressBarModule} from './progress-bar/index';
-import {MdInputModule} from './input/index';
-import {MdSnackBarModule} from './snack-bar/snack-bar';
-import {MdTabsModule} from './tabs/index';
-import {MdToolbarModule} from './toolbar/index';
-import {MdTooltipModule} from './tooltip/index';
-import {MdMenuModule} from './menu/index';
-import {MdDialogModule} from './dialog/index';
+import { MdButtonToggleModule } from './button-toggle/index';
+import { MdButtonModule } from './button/index';
+import { MdCheckboxModule } from './checkbox/index';
+import { MdRadioModule } from './radio/index';
+import { MdSelectModule } from './select/index';
+import { MdSlideToggleModule } from './slide-toggle/index';
+import { MdSliderModule } from './slider/index';
+import { MdSidenavModule } from './sidenav/index';
+import { MdListModule } from './list/index';
+import { MdGridListModule } from './grid-list/index';
+import { MdCardModule } from './card/index';
+import { MdIconModule } from './icon/index';
+import { MdProgressCircleModule } from './progress-circle/index';
+import { MdProgressBarModule } from './progress-bar/index';
+import { MdInputModule } from './input/index';
+import { MdSnackBarModule } from './snack-bar/snack-bar';
+import { MdTabsModule } from './tabs/index';
+import { MdToolbarModule } from './toolbar/index';
+import { MdTooltipModule } from './tooltip/index';
+import { MdMenuModule } from './menu/index';
+import { MdDialogModule } from './dialog/index';
+import { MdLayoutModule } from './layout/index';
 
 
 const MATERIAL_MODULES = [
@@ -60,6 +61,7 @@ const MATERIAL_MODULES = [
   RtlModule,
   A11yModule,
   StyleCompatibilityModule,
+  MdLayoutModule
 ];
 
 @NgModule({
@@ -93,6 +95,7 @@ const MATERIAL_MODULES = [
     MdTooltipModule.forRoot(),
     OverlayModule.forRoot(),
     StyleCompatibilityModule.forRoot(),
+    MdLayoutModule.forRoot()
   ],
   exports: MATERIAL_MODULES,
 })
@@ -105,6 +108,6 @@ export class MaterialRootModule { }
 })
 export class MaterialModule {
   static forRoot(): ModuleWithProviders {
-    return {ngModule: MaterialRootModule};
+    return { ngModule: MaterialRootModule };
   }
 }
